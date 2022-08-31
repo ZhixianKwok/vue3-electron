@@ -1,6 +1,7 @@
 import { app, BrowserWindow, screen } from 'electron';
 import is_dev from 'electron-is-dev';
 import { join } from 'path';
+import { updateHandle } from './updater';
 
 let mainWindow: BrowserWindow | null = null;
 
@@ -34,6 +35,12 @@ class createWin {
     mainWindow.on('ready-to-show', () => {
       mainWindow.show();
     });
+
+    //设置版本更新地址，即将打包后的latest.yml文件和exe文件同时放在
+    //http://xxxx/test/version/对应的服务器目录下,该地址和package.json的publish中的url保持一致
+    const feedUrl = 'http://xxxx/test/version/';
+    //检测版本更新
+    updateHandle(mainWindow, feedUrl);
   }
 }
 

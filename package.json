@@ -45,6 +45,10 @@
       "perMachine": false,
       "allowToChangeInstallationDirectory": true,
       "deleteAppDataOnUninstall": false
+    },
+    "publish": {
+      "provider": "generic",
+      "url": "http://localhost:8088/version"
     }
   },
   "scripts": {
@@ -77,9 +81,9 @@
   "dependencies": {
     "@ant-design/colors": "^6.0.0",
     "@ant-design/icons-vue": "^6.1.0",
+    "@iconify/iconify": "^2.2.1",
     "@logicflow/core": "^0.6.16",
     "@logicflow/extension": "^0.6.16",
-    "@iconify/iconify": "^2.2.1",
     "@vue/runtime-core": "^3.2.31",
     "@vue/shared": "^3.2.31",
     "@vueuse/core": "^6.3.3",
@@ -89,10 +93,11 @@
     "axios": "^0.21.4",
     "codemirror": "^5.62.3",
     "cropperjs": "^1.5.12",
-    "electron-is-dev": "^1.2.0",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.0",
     "echarts": "^5.2.0",
+    "electron-is-dev": "^1.2.0",
+    "electron-updater": "^5.2.1",
     "intro.js": "^4.2.2",
     "lodash-es": "^4.17.21",
     "mockjs": "^1.1.0",
@@ -188,6 +193,7 @@
     "typescript": "4.4.3",
     "vite": "^2.9.1",
     "vite-plugin-compression": "^0.3.5",
+    "vite-plugin-electron-renderer": "^0.9.0",
     "vite-plugin-html": "^3.2.0",
     "vite-plugin-imagemin": "^0.4.5",
     "vite-plugin-mkcert": "^1.6.0",
@@ -197,11 +203,11 @@
     "vite-plugin-style-import": "^2.0.0",
     "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-theme": "^0.8.1",
-    "wait-on": "^5.2.1",
     "vite-plugin-vue-setup-extend": "^0.1.0",
     "vite-plugin-windicss": "^1.4.2",
     "vue-eslint-parser": "^7.11.0",
-    "vue-tsc": "^0.3.0"
+    "vue-tsc": "^0.3.0",
+    "wait-on": "^5.2.1"
   },
   "resolutions": {
     "bin-wrapper": "npm:bin-wrapper-china",
